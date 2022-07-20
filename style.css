@@ -1,2 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300;700&display=swap");
+
+/* Header */
+.customHeader div .d-inline-block {
+  line-height: 2;
+}
+
+.customHeader a .headerTitle {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Bebas Neue";
+  text-transform: uppercase;
+  color: #ffc107;
+}
+
+.bgColor {
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  background-color: #9c835f;
+}
