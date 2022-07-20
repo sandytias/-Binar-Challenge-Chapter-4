@@ -26,7 +26,7 @@
             <div class="row">
                 <div class="col-lg-7 my-2">
                     <div class="d-inline-block mr-3">
-                        <a href="#">
+                        <a>
                             <svg width="40px" height="40px" viewBox="0 0 16 16" class="bi bi-chevron-left"
                                 fill="rgb(114,76,33)" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
@@ -34,12 +34,12 @@
                             </svg>
                         </a>
                     </div>
-                    <a href="#">
+                    <a>
                         <div class="d-inline-block mr-3">
                             <img src="assets/logo.png" width="40px" height="40px" class="" alt="logo">
                         </div>
                     </a>
-                    <a href="#">
+                    <a>
                         <div class="d-inline-block mx-auto align-middle headerTitle">
                             Rock Paper Scissors
                         </div>
@@ -50,12 +50,76 @@
     </div>
     <!-- End of header -->
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
-        crossorigin="anonymous"></script>
+    <!-- Game Content -->
+    <div class="container-fluid bgColor">
+        <div class="container gameContent">
+            <div class="row mb-1">
+                <div class="col-4 col-sm-3 offset-sm-1 d-flex player">
+                    <h3 class="m-auto">Player 1</h3>
+                </div>
+                <div class="col-4 col-sm-3 offset-2 offset-sm-4 d-flex computer">
+                    <h3 class="m-auto">Com</h3>
+                </div>
+            </div>
+
+            <div class="row contentImage">
+                <div class="col-4 col-sm-3 offset-sm-1 d-flex">
+                    <div class="m-auto greyBox playerImage px-4 py-3"><img src="assets/batu.png" class="player rock">
+                    </div>
+                </div>
+                <div class="col-4 col-sm-3 offset-2 offset-sm-4 d-flex">
+                    <div class="m-auto greyBox compImage px-4 py-3"><img src="assets/batu.png" class="compRock"></div>
+                </div>
+            </div>
+
+            <div class="row align-items-center contentImage">
+                <div class="col-4 col-sm-3 offset-sm-1 d-flex">
+                    <div class="m-auto greyBox playerImage px-4 py-3"><img src="assets/kertas.png" class="player paper">
+                    </div>
+                </div>
+                <div class="col-2 col-sm-2 offset-sm-1 d-flex p-0 versus">
+                    <div class="m-auto p-0">
+                        <h1>VS</h1>
+                        <div class="align-middle">
+                            <h5></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 col-sm-3 offset-sm-1 d-flex">
+                    <div class="m-auto greyBox compImage px-4 py-3"><img src="assets/kertas.png" class="compPaper">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row contentImage">
+                <div class="col-4 col-sm-3 offset-sm-1 d-flex">
+                    <div class="m-auto greyBox playerImage px-4 py-3"><img src="assets/gunting.png"
+                            class="player scissor">
+                    </div>
+                </div>
+                <div class="col-4 col-sm-3 offset-2 offset-sm-4 d-flex">
+                    <div class="m-auto greyBox compImage px-4 py-3"><img src="assets/gunting.png" class="compScissor">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row my-2">
+                <div class="col-2 col-sm-2 offset-4 offset-sm-5 d-flex p-0">
+                    <div class="m-auto p-0 reset"><img src="assets/refresh.png" class="refresh"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Game Content-->
+
+    <script src="game.js"></script>
+
 </body>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+    crossorigin="anonymous"></script>
 
 </html>
