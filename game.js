@@ -15,24 +15,19 @@ class Game {
 
   getResult(player, comp) {
     if (player.choice === comp.choice) this.result = "DRAW";
-    if (player.choice === "rock" && comp.choice === "scissor") {
-      this.result = "PLAYER 1 WIN";
-    }
-    if (player.choice === "rock" && comp.choice === "paper") {
-      this.result = "COM WIN";
-    }
-    if (player.choice === "paper" && comp.choice === "rock") {
-      this.result = "PLAYER 1 WIN";
-    }
-    if (player.choice === "paper" && comp.choice === "scissor") {
-      this.result = "COM WIN";
-    }
-    if (player.choice === "scissor" && comp.choice === "paper") {
-      this.result = "PLAYER 1 WIN";
-    }
-    if (player.choice === "scissor" && comp.choice === "rock") {
-      this.result = "COM WIN";
-    }
+    if (player.choice === "rock")
+      return comp.choice === "scissor"
+        ? (this.result = "Menang")
+        : (this.result = "Kalah!");
+    if (player.choice === "paper")
+      return comp.choice === "rock"
+        ? (this.result = "Menang")
+        : (this.result = "Kalah!");
+
+    if (player.choice === "scissor")
+      return comp.choice === "paper"
+        ? (this.result = "Menang")
+        : (this.result = "Kalah!");
   }
 
   setPlayerGreyBox(player) {
@@ -71,7 +66,6 @@ class Game {
         clearInterval;
         return;
       }
-      /* Comp pretends to think before play */
       this.compBox[i++].style.backgroundColor = "#c4c4c4";
       if (i == this.compBox.length) i = 0;
     }, 50);
@@ -82,7 +76,6 @@ class Game {
           clearInterval;
           return;
         }
-        // Reselect the DOM - It won't work with this.compBox
         const compBox = document.querySelectorAll(".greyBox.compImage");
         compBox[i++].style.backgroundColor = "#9c835f";
         if (i == compBox.length) i = 0;
@@ -95,10 +88,8 @@ class Game {
     this.getResult(player, comp);
     this.setPlayerGreyBox(player);
 
-    // Make comp pretend to think first
     this.compThink();
 
-    // Show the result - execute after compThink()
     setTimeout(() => {
       this.showResult(player, comp);
     }, 1200);
